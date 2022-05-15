@@ -9,6 +9,7 @@ function contarDias(){
 
     let dif = dateEnd.getTime() - dateInc.getTime();
 
-    document.getElementById('days').innerText = Math.floor(dif / dia)
+    let result = document.getElementById('days').innerText = Math.floor(dif / dia);
+    let resultado = document.getElementById('days').innerText = `${result} dias para a copa`;
 }
 
