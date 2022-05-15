@@ -1,0 +1,22 @@
+*{
+    background-image: url(./img/brasil.jpg);
+    background-size: 1024px 840px;;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    font-size: 26px;
+    color:white;
+}
+
+#botao{
+    color:white;
+    border-color: white;
+}
+
+h1{
+    color:white;
+}
+
