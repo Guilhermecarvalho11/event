@@ -1,15 +1,49 @@
-const segundo = 1000;
-const minuto = segundo * 60;
-const hora = minuto * 60;
-const dia = hora * 24;
+const second = 1000;
+const minut = second * 60;
+const hour = minut * 60;
+const day = hour * 24;
 
-function contarDias(){
+window.onload = function(){
+    const todayDate = getTodayDate()
+
+    document.mainForm.dataInc.value = todayDate;
+    document.mainForm.dataEnd.value = todayDate;
+}
+
+function getTodayDate(){
+    const today = new Date();
+    let todayDay = today.getDate();
+    let todayMonth = today.getMonth() +1;
+    const todayYear = today.getFullYear();
+    
+    if(todayMonth < 10){
+        todayMonth = '0' + todayMonth
+    }
+
+    if(todayDay < 10){
+        todayDay = '0' + todayDay
+    }
+    
+    return todayYear  + '-' + todayMonth + '-' + todayDay;
+}
+
+function countDays(){
     let dateInc = new Date(document.mainForm.dataInc.value);
-    let dateEnd = new Date(document.mainForm.dataFim.value);
+    let dateEnd = new Date(document.mainForm.dataEnd.value);
 
-    let dif = dateEnd.getTime() - dateInc.getTime();
+    let daysDif = dateEnd.getTime() - dateInc.getTime();
+    let countDaysResult = '';
 
-    let result = document.getElementById('days').innerText = Math.floor(dif / dia);
-    let resultado = document.getElementById('days').innerText = `${result} dias para a copa`;
+    if(daysDif === 0){
+        countDaysResult = "a copa é hoje!";
+    }else if(daysDif < 0){
+        countDaysResult = "a copa já passou!";
+    }else{
+        const daysLeft = Math.floor(daysDif / day);
+        let daysString = daysLeft > 1 ? ' Dias' : ' Dia';
+        countDaysResult = daysLeft + daysString + " para a copa";
+    }
+
+    document.getElementById('days').innerText = countDaysResult;
 }
 
