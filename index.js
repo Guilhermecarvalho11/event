@@ -32,18 +32,15 @@ function countDays(){
 
     let daysDif = dateEnd.getTime() - dateInc.getTime();
     let countDaysResult = '';
-    const dateCope = new Date(18/12/2022)
 
     if(daysDif === 0){
-        countDaysResult = "a copa é hoje!";
+        countDaysResult = "É hoje!";
     }else if(daysDif < 0){
-        countDaysResult = "a copa já passou!";
-    }else if(daysDif > dateCope){
-        countDaysResult = "A copa Já terminou e o HEXA VEEIOO!!!"
+        countDaysResult = "Seu evento ja passou já passou!";
     }else{
         const daysLeft = Math.floor(daysDif / day);
         let daysString = daysLeft > 1 ? ' Dias' : ' Dia';
-        countDaysResult = daysLeft + daysString + " para a copa";
+        countDaysResult = daysLeft + daysString + " para seu evento";
     }
 
     document.getElementById('days').innerText = countDaysResult;

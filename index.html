@@ -7,29 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
-    <title>Contador de Dias Para a Copa</title>
+    <title>Contador de Dias para seu evento</title>
 </head>
 
 <body>
     <div class="header">
-        <h1 id="header">Quanto tempo falta para iniciar a Copa do Mundo?</h1>
+        <h1 id="header">Descubra quanto tempo falta para seu evento</h1>
     </div>
 
     <div id="logo">
-        <p id="descrition">Diferente de outras edições que a Copa do Mundo foi realizada no meio no mês de junho/julho, a Edição de 2022 tera inicio
-            em 21 de novembro devido as altas temperaturas do Qatar. Selecio a data da copa e descubra quanto tempo falta para o inicio do torneio. </p>
+        <p id="descrition">Diferente de outras edições que a Copa do Mundo foi realizada no
+            meio no mês de junho/julho,a Edição de 2022 tera inicio
+            em 21 de novembro devido as altas temperaturas do Qatar. Selecio a data da copa e descubra
+            quanto tempo falta para o inicio do torneio. </p>
     </div>
 
     <form name="mainForm" id="form">
-        
+
         <label for="dataInc">Data de Hoje: </label><input name="dataInc" id="dataInc" type="date"><br>
-        <label  for="dataEnd">Data da Copa: </label><input name="dataEnd" id="dataEnd" type="date"><br>
+        <label for="dataEnd">Data do evento: </label><input name="dataEnd" id="dataEnd" type="date"><br>
         <label for="dataResut">Dias Restantes: </label><span id="days"></span><br>
 
         <button id="botao" type="button" onclick="countDays()">Contar os dias</button>
     </form>
 </body>
 
-<footer><h1 id="footer">Desenvolvido por Guilherme Carvalho</h1></footer>
+<footer>
+    <h1 id="footer">Desenvolvido por Guilherme Carvalho</h1>
+</footer>
 
 </html>
