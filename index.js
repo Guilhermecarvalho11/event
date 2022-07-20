@@ -5,7 +5,6 @@ const day = hour * 24;
 
 window.onload = function(){
     const todayDate = getTodayDate()
-
     document.mainForm.dataInc.value = todayDate;
     document.mainForm.dataEnd.value = todayDate;
 }
@@ -33,11 +32,14 @@ function countDays(){
 
     let daysDif = dateEnd.getTime() - dateInc.getTime();
     let countDaysResult = '';
+    const dateCope = new Date(18/12/2022)
 
     if(daysDif === 0){
         countDaysResult = "a copa é hoje!";
     }else if(daysDif < 0){
         countDaysResult = "a copa já passou!";
+    }else if(daysDif > dateCope){
+        countDaysResult = "A copa Já terminou e o HEXA VEEIOO!!!"
     }else{
         const daysLeft = Math.floor(daysDif / day);
         let daysString = daysLeft > 1 ? ' Dias' : ' Dia';

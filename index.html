@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,27 @@
     <script src="./index.js"></script>
     <title>Contador de Dias Para a Copa</title>
 </head>
-<body>
-    <h1>Calcular os dias que faltam para a copa</h1>
-        <form name="mainForm" id="form">
-            <label for="dataInc">Data de Hoje: </label><input name="dataInc" id ="dataInc" type="date"><br>
-            <label for="dataEnd">Data da Copa:  </label><input name="dataEnd" id="dataEnd" type="date"><br>
-            <label for="dataResut">Dias Restantes:  </label><span id="days"></span><br>
 
-            <button id="botao" type="button" onclick="countDays()">Contar os dias</button>
-        </form>
+<body>
+    <div class="header">
+        <h1 id="header">Quanto tempo falta para iniciar a Copa do Mundo?</h1>
+    </div>
+
+    <div id="logo">
+        <p id="descrition">Diferente de outras edições que a Copa do Mundo foi realizada no meio no mês de junho/julho, a Edição de 2022 tera inicio
+            em 21 de novembro devido as altas temperaturas do Qatar. Selecio a data da copa e descubra quanto tempo falta para o inicio do torneio. </p>
+    </div>
+
+    <form name="mainForm" id="form">
+        
+        <label for="dataInc">Data de Hoje: </label><input name="dataInc" id="dataInc" type="date"><br>
+        <label  for="dataEnd">Data da Copa: </label><input name="dataEnd" id="dataEnd" type="date"><br>
+        <label for="dataResut">Dias Restantes: </label><span id="days"></span><br>
+
+        <button id="botao" type="button" onclick="countDays()">Contar os dias</button>
+    </form>
 </body>
+
+<footer><h1 id="footer">Desenvolvido por Guilherme Carvalho</h1></footer>
+
 </html>
