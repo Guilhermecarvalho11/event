@@ -36,7 +36,7 @@ function countDays(){
     if(daysDif === 0){
         countDaysResult = " LET'S GO!!. É hoje!";
     }else if(daysDif < 0){
-        countDaysResult = " poxa, Seu evento ja passou já passou :(";
+        countDaysResult = " poxa, Seu evento já passou :(";
     }else{
         const daysLeft = Math.floor(daysDif / day);
         let daysString = daysLeft > 1 ? ' Dias' : ' Dia';
